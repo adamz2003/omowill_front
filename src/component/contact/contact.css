@@ -1,0 +1,22 @@
+.contact-container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    min-height: calc(100vh - 200px);
+}
+
+.contact-img {
+    width: 60%;
+}
+
+@media (max-width: 991px) {
+    .contact-container {
+        width: 100%;
+    }
+    .contact-img {
+        display: none;
+    }
+}

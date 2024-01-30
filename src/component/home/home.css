@@ -1,0 +1,119 @@
+.ability {
+    margin-top: -150px;
+}
+
+.ability-container {
+    padding-inline: 30px;
+    margin-top: 50px;
+}
+
+@media (max-width: 991px) {
+    .ability-container {
+        padding-inline: 10px;
+    }
+    .ability-card-content {
+        flex-direction: column;
+    }
+}
+
+.price-container {
+    margin-top: 80px;
+}
+
+.price-card-content {
+    margin-top: 40px;
+}
+
+.price-container .price-card-content .price-card {
+    width: 50%;
+}
+
+@media (max-width: 991px) {
+    .price-card-content {
+        flex-direction: column;
+    }
+
+    .price-container .price-card-content .price-card {
+        width: 100%;
+    }
+}
+
+.booking-header-container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+@media (max-width: 991px) {
+    .booking-header-container h1 {
+        font-size: 30px;
+    }
+
+    .booking-header-container h2 {
+        font-size: 20px;
+    }
+}
+
+
+.info-title {
+    top: -17px;
+    position: absolute;
+}
+
+.info-card {
+    margin-top: 20px;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 20px;
+}
+
+.info-card .info-date {
+    font-size: 35px;
+}
+
+.info-notification {
+    border-top: 1px solid #cccccc;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .info-content {
+        flex-direction: column;
+    }
+
+    .info-chd-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1400px) {
+    .ability {
+        margin-top: 0px;
+    }
+}
+
+.reason-container {
+    height: calc(100vh - 100px);
+}
+
+.reason-container .reason-right-content {
+    overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+    .reason-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .reason-container .reason-content {
+        order: 2;
+        width: 100%;
+    }
+
+    .reason-container .reason-right-content {
+        width: 100%;
+    }
+    .reason-container h1 {
+        font-size: 30px;
+    }
+}

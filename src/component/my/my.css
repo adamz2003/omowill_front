@@ -1,0 +1,19 @@
+.my-container {
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--primary);
+}
+
+.nav-link{
+    color: var(--primary);
+}
+
+.nav-link:hover{
+    color: black;
+}

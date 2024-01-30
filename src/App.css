@@ -1,0 +1,90 @@
+:root {
+    --primary: #3e3e3e;
+    --secondary: #eeeeee;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+input:hover,
+input:focus,
+input:focus-visible,
+input:active,
+textarea,
+textarea:hover,
+textarea:focus,
+textarea:focus-visible,
+textarea:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0px !important;
+    padding-bottom: 5px !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.btn,
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:focus-visible {
+    outline: 0 !important;
+    border: 0 !important;
+    box-shadow: 0 !important;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus-visible
+.btn-primary::after {
+    background-color: var(--primary);
+    padding-inline: 25px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.arrow-btn {
+    background-color: var(--primary);
+    width: 50px;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.opacity-3 {
+    opacity: 0.3;
+}
+
+.w-fit-content {
+    width: fit-content !important;
+}

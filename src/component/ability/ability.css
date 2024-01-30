@@ -1,0 +1,128 @@
+.ability-chd {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ability-order-num {
+    /* font-size: 450px;
+    opacity: 0.1;
+    line-height: 500px; */
+    width: 40%;
+}
+
+.ability-desc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.sample-image {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sample-desc {
+    width: 75%;
+}
+
+.ability-desc-container1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 60%;
+}
+
+.ability-order-num1 {
+    height: calc(100vh - 300px);
+    width: 40%;
+}
+
+.ability-chd-type {
+    font-size: 50px;
+    font-weight: 700;
+    opacity: 0.3;
+    width: 100%;
+    text-align: end;
+}
+
+.ability-chd-num {
+    float: left;
+}
+
+.ability-child {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.ability-child-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 100px);
+    padding-top: 150px;
+    padding-bottom: 150px;
+    gap: 100px;
+    padding-left: 150px;
+}
+
+
+.ability-left-child {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ability-right-child {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: right;
+}
+
+.ability-right-child button {
+    width: fit-content;
+    margin-left: auto;
+    border-radius: 0px !important;
+}
+
+.addBtn {
+    border-radius: 20px !important;
+}
+@media (max-width: 991px) {
+    .ability-child-container {
+        flex-direction: column;
+        padding-left: 0px;
+    }
+
+    .ability-left-child {
+        width: 100%;
+        min-height: 450px;
+    }
+
+    .ability-right-child {
+        width: 100%;
+    }
+
+    .ability-right-child h2 {
+        display: none;
+    }
+
+    .ability-birth-child {
+        flex-direction: column-reverse !important;
+    }
+
+    .ability-left-child img {
+        width: 100%;
+    }
+}

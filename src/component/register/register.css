@@ -1,0 +1,62 @@
+.register-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.register-img {
+    width: 60%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(/public/assets/img/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.register-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.register-field .register-main-field {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.errMsg {
+    position: fixed;
+    display: flex;
+    bottom: 20px;
+    right: 30px;
+    background-color: rgba(254, 238, 239, 1);
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 5px solid rgb(235, 87, 87);
+    transition: all 1s;
+    gap: 30px;
+}
+
+.errMsg img,
+.successMsg img {
+    width: 40px;
+    height: 40px;
+}
+
+.successMsg {
+    position: fixed;
+    display: flex;
+    bottom: 20px;
+    right: 30px;
+    background-color: rgb(229, 250, 245);
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 5px solid rgb(0, 204, 153);
+    gap: 30px;
+}
