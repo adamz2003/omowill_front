@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function NewBornVideoContent() {
   return (
     <div className="row">
       <div className="col-sm-12 col-md-6 py-3">
         <h4>ビデオの作成方法</h4>
-        <iframe
+        <iframe title="newbornvideosample"
           height="380"
-          className="align-content-center  justify-content-center"
-          src="/"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY"
         ></iframe>
       </div>
       <div className="col-sm-12 col-md-6 text-start">

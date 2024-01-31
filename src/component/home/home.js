@@ -95,7 +95,7 @@ function Home() {
                         <h2 className='fw-bold mt-2'>PDFの発行</h2>
                         <h4 className='fw-bold mt-4'>「亡くなった時」 「生誕時」のメッセージどちらも動画または手紙の登録時にログインID・PASSの記載されたPDFを発行</h4>
                         <h6 className='mt-3'>そちらをメールなどで、 ご家族やご遺族に分かるように保管・ 取り置いて、サイトよりマイページで閲覧可能です。</h6>
-                        <h2 className='bg-primary w-fit-content text-white pt-2 pb-2 px-4 mt-4 cursor-pointer'>無料</h2>
+                        <h2 className='bg-primary w-fit-content text-white pt-2 pb-2 px-4 mt-4 cursor-pointer' onClick={() => gotoURL('/register')}>無料</h2>
                     </div>
                     <div className='border p-4 price-card'>
                         <div className='d-flex justify-content-between'>
@@ -108,7 +108,7 @@ function Home() {
                         <h6 className='mt-3'>まず、 動画や手紙が存在するか、 確認の申請 (無料) を行い存在した場合には、 閲覧の申請手続きができます。ご家族やご遺族書類の提出を頂き、 書類確認の等のための事務手数料 (550円税込)を頂戴いたします。</h6>
                         <div className='d-flex align-items-center ms-3 gap-3 mt-3'>
                             <h6 className='fw-bold mb-0'>動画 手紙の存在確認の申請をする</h6>
-                            <img src='/assets/img/right-arrow-white.png' alt='' className='arrow-btn cursor-pointer' />
+                            <img src='/assets/img/right-arrow-white.png' alt='' className='arrow-btn cursor-pointer' onClick={() => gotoURL('/reqview')} />
                         </div>
                     </div>
                 </div>

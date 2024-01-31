@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import { useAuth } from "../../context/AuthProvider";
 import "./navbar.css";
 
 function Navbar() {
-  const { isAuthenticated, login, logout } = useAuth();
   return (
     <div>
       <nav className="navbar navbar-expand-xl fixed-top">

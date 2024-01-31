@@ -1,14 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.css';
 import $ from 'jquery';
 import isValidEmail from '../../util/checkEmail';
 import serverURL from '../../util/url';
 import { toast } from 'react-toastify';
+import { useAuth } from '../../context/AuthProvider';
+import { useCookies } from 'react-cookie';
 
 function Login() {
+    const {login, logout} = useAuth()
+    useEffect(() => {
+        logout()
+    },[])
+    const [cookies, setCookie] = useCookies(['auth']);
     const navigate = useNavigate();
-    const [errMsg, setErrMsg] = useState('');
 
     const loginAction = () => {
 
@@ -41,7 +47,9 @@ function Login() {
                 })
                 .then(data => {
                     if (data === 'success') {
-                        navigate('/mypage');
+                        login()
+                        setCookie('auth', true, {path: "/"})
+                        navigate('/mypage/death')
                     } else {
                         toast.error('メールアドレスまたはパスワードが正しくありません。');
                     }
@@ -74,7 +82,7 @@ function Login() {
                                 <input type='text' className='form-control w-100' id='email' placeholder='メールアドレス' />
                                 <input type="password" className='form-control w-100' id='pwd' placeholder='パスワード' />
                                 <div className="form-check">
-                                    <input className="form-check-input border border-1" type="checkbox" id="loginCheckBox" name="option1" value="something" />
+                                    <input className="form-check-input border border-1 bg-primary" type="checkbox" id="loginCheckBox" name="option1" value="something" />
                                     <label className="form-check-label">
                                         無断転載・無断使用をしない事に同意する
                                     </label>

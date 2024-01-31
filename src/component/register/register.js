@@ -1,15 +1,18 @@
-import { useState } from 'react';
 import serverURL from '../../util/url';
 import './register.css';
 import $ from 'jquery';
 import isValidEmail from '../../util/checkEmail';
-import PdfGenerator from '../../util/jspdf';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
+import { useAuth } from '../../context/AuthProvider';
 
 function Register() {
-
-    const [errMsg, setErrMsg] = useState('');
-    const [successMsg, setSuccessMsg] = useState('');
+    const {logout} = useAuth()
+    useEffect(() => {
+        logout()
+    },[])
+    const navigate = useNavigate()
 
     const regAction = () => {
         if ($('#name').val() === '') {
@@ -58,6 +61,7 @@ function Register() {
                         toast.error('メールアドレスが既に存在します。');
                     } else {
                         toast.success('ご利用登録が成果的に行われました。');
+                        navigate('/login')
                     }
                 })
                 .catch(error => {
@@ -94,7 +98,7 @@ function Register() {
                                 <input type="password" className='form-control w-100' id='confirmPwd' placeholder='パスワード' />
                                 <input type="text" className='form-control w-100' id='telephone' placeholder='電話(任意)' />
                                 <div className="form-check">
-                                    <input className="form-check-input border border-1" type="checkbox" id="regCheckBox" name="option1" value="something" />
+                                    <input className="form-check-input border border-1 bg-primary" type="checkbox" id="regCheckBox" name="option1" value="something" />
                                     <label className="form-check-label">
                                         無断転載・無断使用をしない事に同意する
                                     </label>
@@ -113,7 +117,7 @@ function Register() {
                     </div>
                 </div>
             </div>
-            {
+            {/* {
                 errMsg !== '' ?
                     <div className='errMsg'>
                         <div className='d-flex justify-content-center align-items-center'>
@@ -139,7 +143,7 @@ function Register() {
                     </div>
                     :
                     null
-            }
+            } */}
         </div>
     )
 }

@@ -9,9 +9,9 @@ export default function DeathVideoContent() {
       <div className="col-sm-12 col-md-6 py-3">
         <h4>ビデオの作成方法</h4>
         <iframe
+          title=""
           height="380"
-          className="align-content-center  justify-content-center"
-          src="/"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY"
         ></iframe>
       </div>
       <div className="col-sm-12 col-md-6 text-start">
@@ -25,14 +25,14 @@ export default function DeathVideoContent() {
           <div className="col-12">
             <label htmlFor="vfamily">家族・恋人</label>
             <input className="form-control w-100" />
-            <div class="form-check mb-3 text-start">
-              <label class="form-check-label">
+            <div className="form-check mb-3 text-start">
+              <label className="form-check-label">
                 <input
-                  class="form-check-input bg-primary"
+                  className="form-check-input bg-primary"
                   type="checkbox"
                   name="remember"
                   checked={fvrChk}
-                  onClick={() => setfvrChk(!fvrChk)}
+                  onChange={() => setfvrChk(!fvrChk)}
                 />
                 受取人 指定
               </label>
@@ -49,7 +49,7 @@ export default function DeathVideoContent() {
                 </div>
                 <div>
                   <label htmlFor="vfamily">生年月日</label>
-                  <input className="form-control w-100" />
+                  <input type="date" className="form-control w-100" />
                 </div>
               </div>
             )}
@@ -57,14 +57,14 @@ export default function DeathVideoContent() {
           <div className="col-12">
             <label htmlFor="vfamily">親族</label>
             <input className="form-control w-100" />
-            <div class="form-check mb-3 text-start">
-              <label class="form-check-label">
+            <div className="form-check mb-3 text-start">
+              <label className="form-check-label">
                 <input
-                  class="form-check-input bg-primary"
+                  className="form-check-input bg-primary"
                   type="checkbox"
                   name="remember"
                   checked={rvrChk}
-                  onClick={() => setrvrChk(!rvrChk)}
+                  onChange={() => setrvrChk(!rvrChk)}
                 />
                 受取人 指定
               </label>
@@ -81,7 +81,7 @@ export default function DeathVideoContent() {
                 </div>
                 <div>
                   <label htmlFor="vfamily">生年月日</label>
-                  <input className="form-control w-100" />
+                  <input type="date" className="form-control w-100" />
                 </div>
               </div>
             )}
@@ -89,14 +89,14 @@ export default function DeathVideoContent() {
           <div className="col-12">
             <label htmlFor="vfamily">その他</label>
             <input className="form-control w-100" />
-            <div class="form-check mb-3 text-start">
-              <label class="form-check-label">
+            <div className="form-check mb-3 text-start">
+              <label className="form-check-label">
                 <input
-                  class="form-check-input bg-primary"
+                  className="form-check-input bg-primary"
                   type="checkbox"
                   name="remember"
                   checked={ovrChk}
-                  onClick={() => setovrChk(!ovrChk)}
+                  onChange={() => setovrChk(!ovrChk)}
                 />
                 受取人 指定
               </label>
@@ -113,7 +113,7 @@ export default function DeathVideoContent() {
                 </div>
                 <div>
                   <label htmlFor="vfamily">生年月日</label>
-                  <input className="form-control w-100" />
+                  <input type="date" className="form-control w-100" />
                 </div>
               </div>
             )}

@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './forgot.css';
 import { useNavigate } from 'react-router-dom';
 import serverURL from '../../util/url';
 import $ from 'jquery';
+import { useAuth } from '../../context/AuthProvider';
 
 function Forgot() {
+    const {logout} = useAuth()
+    useEffect(() => {
+        logout()
+    },[])
     const navigate = useNavigate();
     const [errMsg, setErrMsg] = useState('');
 
